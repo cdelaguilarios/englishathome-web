@@ -19,7 +19,7 @@
 
     <a class="go-top"><i class="fa fa-angle-up"></i></a>
 		
-	<footer id="colophon" class="site-footer" role="contentinfo">
+    <footer id="colophon" class="site-footer" role="contentinfo" style="display: none">
 		<div class="site-info container">
 			<a href="<?php echo esc_url( __( 'http://wordpress.org/', 'sydney' ) ); ?>"><?php printf( __( 'Proudly powered by %s', 'sydney' ), 'WordPress' ); ?></a>
 			<span class="sep"> | </span>

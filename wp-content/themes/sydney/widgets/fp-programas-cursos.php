@@ -23,7 +23,7 @@ class Sydney_Programas_Cursos extends WP_Widget {
     </p>
     <p><label for="<?php echo $this->get_field_id('number'); ?>"><?php _e('Número de programas de cursos a mostrar (-1 muestra todos ellos):', 'sydney'); ?></label>
       <input id="<?php echo $this->get_field_id('number'); ?>" name="<?php echo $this->get_field_name('number'); ?>" type="text" value="<?php echo $number; ?>" size="3" /></p>
-    <p><label for="<?php echo $this->get_field_id('see_all'); ?>"><?php _e('La dirección URL de su botón [En caso de que desee un botón debajo de su bloque de servicios]', 'sydney'); ?></label>
+    <p><label for="<?php echo $this->get_field_id('see_all'); ?>"><?php _e('La dirección URL de su botón [En caso de que desee un botón debajo de su bloque de programas de cursos]', 'sydney'); ?></label>
       <input class="widefat custom_media_url" id="<?php echo $this->get_field_id('see_all'); ?>" name="<?php echo $this->get_field_name('see_all'); ?>" type="text" value="<?php echo $see_all; ?>" size="3" /></p>	
     <p><label for="<?php echo $this->get_field_id('see_all_text'); ?>"><?php _e('El texto del botón [Predeterminado para <em>"Ver todos nuestros programas"</ em> si se deja vacío]', 'sydney'); ?></label>
       <input class="widefat custom_media_url" id="<?php echo $this->get_field_id('see_all_text'); ?>" name="<?php echo $this->get_field_name('see_all_text'); ?>" type="text" value="<?php echo $see_all_text; ?>" size="3" /></p>
@@ -58,18 +58,13 @@ class Sydney_Programas_Cursos extends WP_Widget {
       $number = -1;
     $two_cols = isset($instance['two_cols']) ? $instance['two_cols'] : false;
 
-    $services = new WP_Query(array(
-        'no_found_rows' => true,
-        'post_status' => 'publish',
-        'post_type' => 'services',
-        'posts_per_page' => $number
-    ));
-
     $programas_cursos = get_terms(array(
         'taxonomy' => 'programas-cursos',
         'hide_empty' => false,
+        'orderby' => 'id',
+        'order' => 'ASC'
     ));
-
+    $auxContador = 0;
     echo $args['before_widget'];
     echo (($title) ? $before_title . $title . $after_title : "");
     foreach ($programas_cursos as $programa_curso) {
@@ -99,14 +94,19 @@ class Sydney_Programas_Cursos extends WP_Widget {
             </div><!--.info-->	
           </div>
         </div>
-      <?php } ?>
+        <?php
+        $auxContador++;
+        if ($auxContador == $number)
+          break;
+      }
+      ?>
       <?php if ($see_all != '') :
         ?>
         <a href="<?php echo esc_url($see_all); ?>" class="roll-button more-button">
           <?php if ($see_all_text) : ?>
             <?php echo $see_all_text; ?>
           <?php else : ?>
-            <?php echo __('Ver todos los programas de cursos', 'sydney'); ?>
+            <?php echo __('Ver todos nuestros programas', 'sydney'); ?>
           <?php endif; ?>
         </a>
       <?php endif; ?>	

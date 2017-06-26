@@ -74,6 +74,7 @@ class Sydney_Toolbox {
                 
                 //EAH
 		require_once( ST_DIR . 'inc/post-type-cursos.php' );
+		require_once( ST_DIR . 'inc/post-type-testimonios.php' );
 		require_once( ST_DIR . 'inc/taxonomies/programas-cursos-taxonomy.php' );
 	}
 

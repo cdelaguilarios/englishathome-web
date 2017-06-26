@@ -1343,7 +1343,7 @@ function sydney_customize_register( $wp_customize ) {
     $wp_customize->add_setting(
         'primary_color',
         array(
-            'default'           => '#d65050',
+            'default'           => '#004c9e',
             'sanitize_callback' => 'sanitize_hex_color',
         )
     );
@@ -1443,7 +1443,7 @@ function sydney_customize_register( $wp_customize ) {
     $wp_customize->add_setting(
         'menu_items_hover',
         array(
-            'default'           => '#d65050',
+            'default'           => '#004c9e',
             'sanitize_callback' => 'sanitize_hex_color',
         )
     );

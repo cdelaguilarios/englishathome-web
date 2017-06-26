@@ -29,7 +29,8 @@ function sydney_theme_widgets($widgets) {
 		'Sydney_Portfolio',
             
                 //EAH
-		'Sydney_Programas_Cursos'
+		'Sydney_Programas_Cursos',
+		'Sydney_Testimonios'
 	);
 	foreach($theme_widgets as $theme_widget) {
 		if( isset( $widgets[$theme_widget] ) ) {

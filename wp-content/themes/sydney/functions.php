@@ -132,6 +132,7 @@ function sydney_widgets_init() {
                 
                 //EAH
 		register_widget( 'Sydney_Programas_Cursos' );
+		register_widget( 'Sydney_Testimonios' );
 	}
 
 }
@@ -158,6 +159,7 @@ if ( defined( 'SITEORIGIN_PANELS_VERSION' ) ) {
         
         //EAH
 	require get_template_directory() . "/widgets/fp-programas-cursos.php";
+	require get_template_directory() . "/widgets/fp-testimonios.php";
 }
 
 /**

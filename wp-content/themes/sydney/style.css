@@ -28,7 +28,7 @@ Social
 .widget-area .widget_fp_social a,
 .social-menu-widget a,
 .social-menu-widget a:hover {
-	color: #d65050;
+	color: #004c9e;
 }
 .social-menu-widget li {
 	display: inline-block;
@@ -719,7 +719,7 @@ Header
 		outline: none;
 	}
 	#mainnav ul li a:hover {
-		color: #d65050;
+		color: #004c9e;
 	}
 	#mainnav ul ul a {
 		width: 180px;
@@ -1722,7 +1722,7 @@ Preloader
 	.preloader .pre-bounce2 {
 	    -webkit-animation: 2s ease 0s normal none infinite bounce;
 	            animation: 2s ease 0s normal none infinite bounce;
-	    background-color: #de4939;
+	    background-color: #004c9e;
 	    border-radius: 50%;
 	    height: 100%;
 	    left: 0;
@@ -1832,7 +1832,7 @@ Panels
 		width: 50px;
 		height: 1px;
 		margin-left: -25px;
-		background-color: #d65050;
+		background-color: #004c9e;
 	}
 	.panel-grid {
 		max-width: 1170px;
@@ -1981,7 +1981,7 @@ Panels
 -------------------------------------------------------------- */
 
 .sydney_contact_info_widget span {
-	color: #d65050;
+	color: #004c9e;
 	margin-right: 15px;
 }
 .sydney_contact_info_widget div {
@@ -2734,8 +2734,8 @@ Panels
 		background-color: #fff;
 	}
 	.archive .team-social li a {
-		color: #d65050;
-		border: 1px solid #d65050;
+		color: #004c9e;
+		border: 1px solid #004c9e;
 	}
 	.roll-team .team-item .team-pop {
 		color: #fff;
@@ -2786,25 +2786,25 @@ Panels
 /* Elements
 -------------------------------------------------------------- */
 	a {
-		color: #d65050;
+		color: #004c9e;
 	}
 	h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
-		color: #d65050;
+		color: #004c9e;
 	}
-	.text-color { color: #d65050;}
+	.text-color { color: #004c9e;}
 	button,
 	input[type="button"],
 	input[type="reset"],
 	input[type="submit"] {
-		background-color: #d65050;
-		border: 1px solid #d65050;
+		background-color: #004c9e;
+		border: 1px solid #004c9e;
 	}
 	button:hover,
 	input[type="button"]:hover,
 	input[type="reset"]:hover,
 	input[type="submit"]:hover {
 		background-color: transparent;
-		color: #d65050;
+		color: #004c9e;
 	}
 	textarea:focus,
 	input[type="text"]:focus,
@@ -2821,143 +2821,143 @@ Panels
 	input[type="search"]:focus,
 	input[type="tel"]:focus,
 	input[type="color"]:focus {
-		border: 1px solid #d65050;
+		border: 1px solid #004c9e;
 	}
 	#mainnav > ul > li > a.active,
 	#mainnav > ul > li > a:hover {
-		color: #d65050;
+		color: #004c9e;
 	}
 	#mainnav ul li ul:after {
-		background-color: #d65050;
+		background-color: #004c9e;
 		transition: all 0.3s ease;
 		-webkit-transition: all 0.3s ease;
 	}
 	#mainnav .sub-menu li:hover > a {
-		background-color: #d65050;
+		background-color: #004c9e;
 	}
 	.error-wrap #search-submit:hover {
-		background-color: #d65050;
-		border-color: #d65050;
+		background-color: #004c9e;
+		border-color: #004c9e;
 	}
 	.text-slider .maintitle:after {
-		background-color: #d65050;
+		background-color: #004c9e;
 	}
 	.content-area .hentry:after {
-		background-color: #d65050;
+		background-color: #004c9e;
 	}
 	.hentry .meta-post a:hover {
-		color: #d65050;
+		color: #004c9e;
 	}
 	.hentry blockquote {
-	    border-left: 3px solid #d65050;
+	    border-left: 3px solid #004c9e;
 	}
 	.blog-pagination ul li {
-		border: 1px solid #d65050;
+		border: 1px solid #004c9e;
 	}
 	.blog-pagination ul li.active,
 	.blog-pagination ul li:hover a {
-		background-color: #d65050;
+		background-color: #004c9e;
 	}
 	.sidebar .widget:before {
-		background-color: #d65050;
+		background-color: #004c9e;
 	}
 	.widget-tags .tag-list a:hover {
-		border: 1px solid #d65050;
+		border: 1px solid #004c9e;
 	}
 	.comment .comment-detail {
-		border: 1px solid #d65050;
+		border: 1px solid #004c9e;
 	}
 	.bottom .socials li:hover a,
 	.go-top {
-		background-color: #d65050;
+		background-color: #004c9e;
 	}
 	.go-top:hover {
-		color: #d65050;
+		color: #004c9e;
 	}
 	.switcher-container .switcher-icon a:focus {
-		color: #d65050;
+		color: #004c9e;
 	}
 	.owl-theme .owl-controls .owl-page span{
-	  border: 2px solid #d65050;
+	  border: 2px solid #004c9e;
 	}
 	.owl-theme .owl-controls .owl-page.active span,
 	.owl-theme .owl-controls.clickable .owl-page:hover span{
-	  background-color: #d65050;
+	  background-color: #004c9e;
 	}
 	.roll-icon-box .icon {
-		border: 1px solid #d65050;
+		border: 1px solid #004c9e;
 	}
 	.roll-icon-box .icon i,
 	.roll-icon-box .content h3 a:hover {
-		color: #d65050;
+		color: #004c9e;
 	}
 	.roll-icon-box.white .icon {
-		background-color: #d65050;
+		background-color: #004c9e;
 	}
 	.roll-icon-box.white .content h3 a {
-		color: #d65050;
+		color: #004c9e;
 	}
 	.roll-icon-list .icon {
-		border: 1px solid #d65050;
+		border: 1px solid #004c9e;
 	}
 	.roll-icon-list .icon i,
 	.roll-icon-list .content h3 a:hover {
-		color: #d65050;
+		color: #004c9e;
 	}
 	.roll-button {
-		background-color: #d65050;
-		border: 1px solid #d65050;
+		background-color: #004c9e;
+		border: 1px solid #004c9e;
 	}
 	.roll-button:hover {
-		color: #d65050;
+		color: #004c9e;
 	}
 	.roll-button.border {
-		color: #d65050;
-		border: 1px solid #d65050;
+		color: #004c9e;
+		border: 1px solid #004c9e;
 	}
 	.roll-button.border:hover {
-		background-color: #d65050;
+		background-color: #004c9e;
 	}
 	.roll-button.light:hover {
-		border: 1px solid #d65050;
-		background-color: #d65050;
+		border: 1px solid #004c9e;
+		background-color: #004c9e;
 	}
 	.project-filter li a.active,
 	.project-filter li a:hover {
-		background-color: #d65050;
+		background-color: #004c9e;
 	}
 	.roll-testimonials .name {
 		font-family: "Raleway", sans-serif;
 		font-size: 18px;
 		font-weight: 500;
-		color: #d65050;
+		color: #004c9e;
 	}
 	.roll-project .project-item .project-pop {
-		background-color: #d65050;
+		background-color: #004c9e;
 	}
 	.roll-socials li a {
-		border: 1px solid #d65050;
+		border: 1px solid #004c9e;
 	}
 	.roll-socials li a:hover {
-		background-color: #d65050;
-		border: 1px solid #d65050;
+		background-color: #004c9e;
+		border: 1px solid #004c9e;
 	}
 	.roll-infomation li.address:before,
 	.roll-infomation li.phone:before,
 	.roll-infomation li.email:before {
-		color: #d65050;
+		color: #004c9e;
 	}
 	.roll-progress .progress-animate {
-		background-color: #d65050;
+		background-color: #004c9e;
 	}
 	.roll-team .team-item .team-pop .team-social li:hover a {
-		color: #d65050;
+		color: #004c9e;
 	}
 	.roll-team .team-item .team-pop {
-		background-color: #d65050;
+		background-color: #004c9e;
 	}
 	.roll-team .team-content .name {
-		color: #d65050;
+		color: #004c9e;
 	}
 /* Woocommerce basic - full styles in wc.css
 -------------------------------------------------------------- */
@@ -2965,7 +2965,7 @@ Panels
 .woocommerce a.button,
 .woocommerce button.button,
 .woocommerce input.button {
-	background-color: #d65050;
+	background-color: #004c9e;
 }
 .cart-contents {
 	position: relative;
@@ -2975,7 +2975,7 @@ Panels
 	font-size: 18px;
 }
 .cart-amount {
-    background-color: #d65050;
+    background-color: #004c9e;
     font-size: 12px;
     display: block;
     width: 18px;
