@@ -1,0 +1,12 @@
+.eah-cursos-contenidos tbody tr td:nth-child(2){
+  width: 100%;
+}
+.eah-cursos-contenidos tfoot button{
+  float: right;
+  display:block;
+  border-radius: 50%;
+  border: 1px solid;
+}
+.eah-cursos-contenidos .agregar-eah-cursos-contenidos{
+  margin-left: 10px;
+}
