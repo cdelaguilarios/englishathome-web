@@ -12,3 +12,4 @@
 require_once __DIR__ . '/inc/tipos_publicacion.php';
 require_once __DIR__ . '/inc/taxonomias.php';
 require_once __DIR__ . '/inc/shortcodes.php';
+require_once __DIR__ . '/inc/registro_interesado.php';

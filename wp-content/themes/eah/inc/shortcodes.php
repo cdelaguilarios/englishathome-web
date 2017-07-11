@@ -25,7 +25,7 @@ function eah_lista_programas($parametros = []) {
   foreach ($programasSel as $programa) {
     $imagen = get_field('imagen', 'programas_' . $programa->term_id);
     $contenido .= '[et_pb_column type="1_3" parallax="off" parallax_method="on"]
-                          [et_pb_blurb title="' . $programa->name . '" url="' . get_term_link($programa) . '" image="' . $imagen["url"] . '" text_orientation="center"]
+                          [et_pb_blurb title="' . $programa->name . '" url="' . get_term_link($programa) . '" image="' . $imagen["url"] . '" text_orientation="center" background_color="#ffffff" use_border_color="on" border_color="#d8d8d8" custom_padding="20px|20px|20px|20px" custom_css_main_element="border-radius: 5px;" custom_css_blurb_image="margin: -20px -20px 10px;" module_class="elemento_programa"]
                           <p style="text-align: justify;">' . $programa->description . '</p>
                           [/et_pb_blurb]
                         [/et_pb_column]';
@@ -71,3 +71,21 @@ function eah_testimonios($parametros = []) {
 }
 
 add_shortcode('eah_testimonios', 'eah_testimonios');
+
+function eah_formulario_interesado() {
+  return do_shortcode('<div style="
+                          border: 1px solid #d8d8d8;
+                          width: 400px;
+                          margin: 0 auto;
+                          border-radius: 5px;
+                      ">
+                      <h3 class="title">
+                      <span style="
+                          z-index: 5;
+                          position: relative;
+                      ">Solicita más información</span></h3>
+                      [contact-form-7 id="395" title="Formulario interesados"]
+                      </div>');
+}
+
+add_shortcode('eah_formulario_interesado', 'eah_formulario_interesado');
