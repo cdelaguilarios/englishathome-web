@@ -25,7 +25,7 @@ function eah_lista_programas($parametros = []) {
   foreach ($programasSel as $programa) {
     $imagen = get_field('imagen', 'programas_' . $programa->term_id);
     $contenido .= '[et_pb_column type="1_3" parallax="off" parallax_method="on"]
-                          [et_pb_blurb title="' . $programa->name . '" url="' . get_term_link($programa) . '" image="' . $imagen["url"] . '" text_orientation="center" admin_label="Anuncio" module_class="elemento_programa" background_color="#ffffff" use_border_color="on" border_color="#d8d8d8" custom_padding="20px|20px|20px|20px" custom_css_main_element="border-radius: 5px;" custom_css_blurb_image="margin: -20px -20px 10px;"]
+                          [et_pb_blurb title="' . $programa->name . '" url="' . get_term_link($programa) . '" image="' . $imagen["sizes"]["medium"] . '" text_orientation="center" admin_label="Anuncio" module_class="elemento_programa" background_color="#ffffff" use_border_color="on" border_color="#d8d8d8" custom_padding="20px|20px|20px|20px" custom_css_main_element="border-radius: 5px;" custom_css_blurb_image="margin: -20px -20px 10px;"]
                           <p style="text-align: justify;">' . $programa->description . '</p>
                           [/et_pb_blurb]
                         [/et_pb_column]';
