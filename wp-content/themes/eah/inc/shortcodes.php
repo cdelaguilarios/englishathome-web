@@ -74,18 +74,8 @@ function eah_testimonios($parametros = []) {
 add_shortcode('eah_testimonios', 'eah_testimonios');
 
 function eah_formulario_interesado() {
-  return do_shortcode('<div style="
-                          border: 1px solid #d8d8d8;
-                          width: 400px;
-                          margin: 0 auto;
-                          border-radius: 5px;               
-                          background-color: #fff;
-                      ">
-                      <h3 class="title">
-                      <span style="
-                          z-index: 5;
-                          position: relative;
-                      ">Solicita más información</span></h3>
+  return do_shortcode('<div style="max-width: 400px;margin: 0 auto;border-radius: 5px;background-color: #fff;">
+                      <h3 class="title"><span style="z-index: 5;position: relative;">Solicita más información</span></h3>
                       [contact-form-7 id="395" title="Formulario interesados"]
                       </div>');
 }
