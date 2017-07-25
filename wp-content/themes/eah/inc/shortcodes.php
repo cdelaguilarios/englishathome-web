@@ -8,6 +8,13 @@ function eah_lista_programas($parametros = []) {
       'hide_empty' => false,
   ]);
 
+  foreach ($programas as $programa) {
+    $programa->numero_de_orden = get_field('numero_de_orden', 'programas_' . $programa->term_id);
+  }
+  usort($programas, function($a, $b) {
+    return strcmp($a->numero_de_orden, $b->numero_de_orden);
+  });
+
   $programasSel = [];
   if ($destacados == "1") {
     foreach ($programas as $programa) {
@@ -21,20 +28,27 @@ function eah_lista_programas($parametros = []) {
   }
 
   $auxCont = 0;
-  $contenido = (($destacados == "1") ? '' : '[et_pb_row custom_padding="0px|||" disabled_on="on|off|off"]');
+  $contenido = (($destacados == "1") ? '' : '[et_pb_row make_fullwidth="off" use_custom_width="off" width_unit="on" use_custom_gutter="off" custom_margin="10px||10px|" allow_player_pause="off" parallax="off" parallax_method="on" make_equal="off" parallax_1="off" parallax_method_1="off" parallax_2="off" parallax_method_2="off" parallax_3="off" parallax_method_3="off"]');
   foreach ($programasSel as $programa) {
+    $cursos = get_posts([
+        'post_type' => 'cursos',
+        'numberposts' => 1,
+        'tax_query' => [
+            ['taxonomy' => 'programas',
+                'field' => 'id',
+                'terms' => $programa->term_id,
+                'include_c $programa->term_idhildren' => false]
+    ]]);
+
     $imagen = get_field('imagen', 'programas_' . $programa->term_id);
-    $contenido .= '[et_pb_column type="1_3" parallax="off" parallax_method="on"]
-                          [et_pb_blurb title="' . $programa->name . '" url="' . get_term_link($programa) . '" image="' . $imagen["sizes"]["medium"] . '" text_orientation="center" admin_label="Anuncio" module_class="elemento_programa" background_color="#ffffff" use_border_color="on" border_color="#d8d8d8" custom_padding="20px|20px|20px|20px" custom_css_main_element="border-radius: 5px;" custom_css_blurb_image="margin: -20px -20px 10px;"]
-                          <p style="text-align: justify;">' . $programa->description . '</p>
-                          [/et_pb_blurb]
-                        [/et_pb_column]';
+    $contenido .= '[et_pb_column type="1_3"]
+            [et_pb_blurb title="' . $programa->name . '" url="' . ($programa->count == 1 && count($cursos) > 0 ? get_post_permalink($cursos[0]) : get_term_link($programa)) . '" image="' . $imagen["url"] . '" animation="off" text_orientation="center" module_class="' . (($destacados == "1") ? 'elemento_programa_destacado' : 'elemento_programa') . '" header_font_size="20px" background_color="#ffffff" use_border_color="on" border_color="#d8d8d8" custom_padding="20px|20px|20px|20px" custom_css_main_element="border-radius: 5px;" custom_css_blurb_image="margin: -20px -20px 10px;"][/et_pb_blurb][/et_pb_column]';
     $auxCont++;
     if (($auxCont % 3) == 0) {
-      $contenido .= (($destacados == "1") ? '' : '[/et_pb_row][et_pb_row custom_padding="0px|||" disabled_on="on|off|off"]');
+      $contenido .= (($destacados == "1") ? '' : '[/et_pb_row][et_pb_row make_fullwidth="off" use_custom_width="off" width_unit="on" use_custom_gutter="off" custom_margin="10px||10px|" allow_player_pause="off" parallax="off" parallax_method="on" make_equal="off" parallax_1="off" parallax_method_1="off" parallax_2="off" parallax_method_2="off" parallax_3="off" parallax_method_3="off"]');
     }
   }
-  
+
   $contenido .= (($destacados == "1") ? '' : '[/et_pb_row]');
   return do_shortcode($contenido);
 }
@@ -48,7 +62,6 @@ function eah_testimonios($parametros = []) {
       'post_type' => 'testimonios',
       'numberposts' => -1]);
 
-  $contenido = '';
   if (count($testimonios) > 0) {
     $testimoniosSel = [];
     if ($destacados == "1") {
@@ -61,21 +74,19 @@ function eah_testimonios($parametros = []) {
     } else {
       $testimoniosSel = $testimonios;
     }
-
-    $contenido = '[et_pb_column type="4_4" parallax="off" parallax_method="on"][et_pb_slider show_arrows="off" auto="on" auto_speed="10000" admin_label="Slider" body_font="||||"]';
-    foreach ($testimoniosSel as $testimonio) {
-      $contenido .= '[et_pb_slide heading="' . $testimonio->post_title . '" background_color="rgba(0,0,0,0.3)" image="' . get_the_post_thumbnail_url($testimonio) . '" use_bg_overlay="off" use_text_overlay="off" body_font="||on||" body_font_size="15px"]' . $testimonio->post_content . '[/et_pb_slide]';
-    }
-    $contenido .= '[/et_pb_slider][/et_pb_column]';
-  }
-  return do_shortcode($contenido);
+  }  
+  ob_start();
+  include_once __DIR__ . "/vistas/testimonios.php";
+  $content = ob_get_contents();
+  ob_end_clean();
+  return $content;
 }
 
 add_shortcode('eah_testimonios', 'eah_testimonios');
 
 function eah_formulario_interesado() {
   return do_shortcode('<div style="max-width: 400px;margin: 0 auto;border-radius: 5px;background-color: #fff;">
-                      <h3 class="title"><span style="z-index: 5;position: relative;">Solicita más información</span></h3>
+                      <h3 class="title-formulario"><span style="z-index: 5;position: relative;">Solicita más información</span></h3>
                       [contact-form-7 id="395" title="Formulario interesados"]
                       </div>');
 }
