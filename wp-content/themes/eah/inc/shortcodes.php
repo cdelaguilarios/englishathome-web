@@ -28,7 +28,7 @@ function eah_lista_programas($parametros = []) {
   }
 
   $auxCont = 0;
-  $contenido = (($destacados == "1") ? '' : '[et_pb_row make_fullwidth="off" use_custom_width="off" width_unit="on" use_custom_gutter="off" custom_margin="10px||10px|" allow_player_pause="off" parallax="off" parallax_method="on" make_equal="off" parallax_1="off" parallax_method_1="off" parallax_2="off" parallax_method_2="off" parallax_3="off" parallax_method_3="off"]');
+  $contenido = (($destacados == "1") ? '' : '[et_pb_row make_fullwidth="off" use_custom_width="off" width_unit="on" use_custom_gutter="off" custom_margin="15px|||" allow_player_pause="off" parallax="off" parallax_method="on" make_equal="off" parallax_1="off" parallax_method_1="off" parallax_2="off" parallax_method_2="off" parallax_3="off" parallax_method_3="off"]');
   foreach ($programasSel as $programa) {
     $cursos = get_posts([
         'post_type' => 'cursos',
@@ -45,7 +45,7 @@ function eah_lista_programas($parametros = []) {
             [et_pb_blurb title="' . $programa->name . '" url="' . ($programa->count == 1 && count($cursos) > 0 ? get_post_permalink($cursos[0]) : get_term_link($programa)) . '" image="' . $imagen["url"] . '" animation="off" text_orientation="center" module_class="' . (($destacados == "1") ? 'elemento_programa_destacado' : 'elemento_programa') . '" header_font_size="20px" background_color="#ffffff" use_border_color="on" border_color="#d8d8d8" custom_padding="20px|20px|20px|20px" custom_css_main_element="border-radius: 5px;" custom_css_blurb_image="margin: -20px -20px 10px;"][/et_pb_blurb][/et_pb_column]';
     $auxCont++;
     if (($auxCont % 3) == 0) {
-      $contenido .= (($destacados == "1") ? '' : '[/et_pb_row][et_pb_row make_fullwidth="off" use_custom_width="off" width_unit="on" use_custom_gutter="off" custom_margin="10px||10px|" allow_player_pause="off" parallax="off" parallax_method="on" make_equal="off" parallax_1="off" parallax_method_1="off" parallax_2="off" parallax_method_2="off" parallax_3="off" parallax_method_3="off"]');
+      $contenido .= (($destacados == "1") ? '' : '[/et_pb_row][et_pb_row make_fullwidth="off" use_custom_width="off" width_unit="on" use_custom_gutter="off" custom_margin="15px|||" allow_player_pause="off" parallax="off" parallax_method="on" make_equal="off" parallax_1="off" parallax_method_1="off" parallax_2="off" parallax_method_2="off" parallax_3="off" parallax_method_3="off"]');
     }
   }
 
@@ -74,7 +74,7 @@ function eah_testimonios($parametros = []) {
     } else {
       $testimoniosSel = $testimonios;
     }
-  }  
+  }
   ob_start();
   include_once __DIR__ . "/vistas/testimonios.php";
   $content = ob_get_contents();
@@ -85,7 +85,13 @@ function eah_testimonios($parametros = []) {
 add_shortcode('eah_testimonios', 'eah_testimonios');
 
 function eah_formulario_interesado() {
-  return do_shortcode('<div style="max-width: 400px;margin: 0 auto;border-radius: 5px;background-color: #fff;">
+  return do_shortcode('<script>
+    jQuery(document).ready(function(){
+      jQuery("select[name=\'curso\']").prepend("<option value=\'\'' . (!is_single() ? 'selected=\'selected\'' : '') . '>Seleccionar curso</option>");
+      jQuery("select[name=\'distrito\']").prepend("<option value=\'\' selected=\'selected\'>Seleccionar distrito</option>");
+    });
+    </script>
+    <div style="max-width: 400px;margin: 0 auto;border-radius: 5px;background-color: #fff;">
                       <h3 class="title-formulario"><span style="z-index: 5;position: relative;">Solicita más información</span></h3>
                       [contact-form-7 id="395" title="Formulario interesados"]
                       </div>');
