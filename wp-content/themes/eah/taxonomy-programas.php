@@ -13,6 +13,13 @@ $cursos = get_posts([
             'include_children' => false]
         ]]);
 
+foreach ($cursos as $curso) {
+  $curso->numero_de_orden = get_field('numero_de_orden', $curso->ID);
+}
+usort($cursos, function($a, $b) {
+  return strcmp($a->numero_de_orden, $b->numero_de_orden);
+});
+
 $auxCont = 0;
 
 $contenido = '[et_pb_section fb_built="1" background_color="#f5f5f5" custom_padding="35px|0px|35px|0px" fullwidth="on" admin_label="Sección"]

@@ -53,11 +53,11 @@ $adaptabilidad_codigo = get_field('adaptabilidad_codigo');
 	[/et_pb_fullwidth_code]
 [/et_pb_section]') .
             (!empty($estructura) ?
-                    '[et_pb_section bb_built="1" admin_label="Sección Estructura" custom_padding="15px||15px|" transparent_background="off" allow_player_pause="off" inner_shadow="off" parallax="off" parallax_method="on" make_fullwidth="off" use_custom_width="off" width_unit="on" make_equal="off" use_custom_gutter="off"]
+                    '[et_pb_section bb_built="1" admin_label="Sección Estructura" custom_padding="15px||0px|" transparent_background="off" allow_player_pause="off" inner_shadow="off" parallax="off" parallax_method="on" make_fullwidth="off" use_custom_width="off" width_unit="on" make_equal="off" use_custom_gutter="off"]
 	[et_pb_row admin_label="Fila" custom_padding="0px||0px|" custom_margin="0px||0px|" parallax_method_1="off" custom_css_main_1="margin-bottom: 0px;" custom_css_main_element="padding: 0px;"]
 		[et_pb_column type="4_4"]
 			[et_pb_cta admin_label="Estructura" title="Estructura" use_background_color="off" background_layout="light" header_font="|on|||" header_font_size="40" header_text_color="#0e4f8f" body_font_size="20" custom_margin="0px||0px|" custom_padding="0px||0px|"]
-				<div class="separator small center " style="margin-top: 10px; margin-bottom: 24px; background-color: #0e4f8f; height: 1px; width: 50px;"></div>
+				<div class="separator small center " style="margin-top: 10px; background-color: #0e4f8f; height: 1px; width: 50px;"></div>
 			[/et_pb_cta]
 		[/et_pb_column]
 	[/et_pb_row]        
@@ -78,11 +78,11 @@ $adaptabilidad_codigo = get_field('adaptabilidad_codigo');
 	[/et_pb_row]
 [/et_pb_section]' : '') .
             (!empty($metodologia) ?
-                    '[et_pb_section bb_built="1" admin_label="Sección Metodología Escritorio" background_color="#e8e8e8" custom_padding="15px||15px|" disabled_on="on|on|off" transparent_background="off" allow_player_pause="off" inner_shadow="off" parallax="off" parallax_method="on" make_fullwidth="off" use_custom_width="off" width_unit="on" make_equal="off" use_custom_gutter="off"]
+                    '[et_pb_section bb_built="1" admin_label="Sección Metodología Escritorio" background_color="#e8e8e8" custom_padding="15px||0px|" disabled_on="on|on|off" transparent_background="off" allow_player_pause="off" inner_shadow="off" parallax="off" parallax_method="on" make_fullwidth="off" use_custom_width="off" width_unit="on" make_equal="off" use_custom_gutter="off"]
 	[et_pb_row admin_label="Fila" custom_padding="0px||0px|" custom_margin="0px||0px|" parallax_method_1="off"]
 		[et_pb_column type="4_4"]
 			[et_pb_cta admin_label="Metodología escritorio" title="Metodología" use_background_color="off" background_layout="light" header_font="|on|||" header_font_size="40" header_text_color="#0e4f8f" body_font_size="20" custom_margin="0px||0px|" custom_padding="0px||0px|"]
-				<div class="separator small center " style="margin-top: 10px; margin-bottom: 24px; background-color: #0e4f8f; height: 1px; width: 50px;"></div>
+				<div class="separator small center " style="margin-top: 10px; background-color: #0e4f8f; height: 1px; width: 50px;"></div>
 			[/et_pb_cta]
 		[/et_pb_column]
 	[/et_pb_row]
@@ -103,11 +103,11 @@ $adaptabilidad_codigo = get_field('adaptabilidad_codigo');
 	[/et_pb_row]
 [/et_pb_section]
 
-[et_pb_section bb_built="1" admin_label="Sección Metodología Móvil" background_color="#f5f5f5" custom_padding="15px||15px|" disabled_on="off|off|on" transparent_background="off" allow_player_pause="off" inner_shadow="off" parallax="off" parallax_method="on" make_fullwidth="off" use_custom_width="off" width_unit="on" make_equal="off" use_custom_gutter="off"]
+[et_pb_section bb_built="1" admin_label="Sección Metodología Móvil" background_color="#f5f5f5" custom_padding="15px||0px|" disabled_on="off|off|on" transparent_background="off" allow_player_pause="off" inner_shadow="off" parallax="off" parallax_method="on" make_fullwidth="off" use_custom_width="off" width_unit="on" make_equal="off" use_custom_gutter="off"]
 	[et_pb_row admin_label="Fila" custom_padding="0px||0px|" custom_margin="0px||0px|" parallax_method_1="off"]
 		[et_pb_column type="4_4"]
 			[et_pb_cta admin_label="Metodología móvil" title="Metodología" use_background_color="off" background_layout="light" header_font="|on|||" header_font_size="40" header_text_color="#0e4f8f" body_font_size="20" custom_margin="0px||0px|" custom_padding="0px||0px|"]
-				<div class="separator small center " style="margin-top: 10px; margin-bottom: 24px; background-color: #0e4f8f; height: 1px; width: 50px;"></div>
+				<div class="separator small center " style="margin-top: 10px; background-color: #0e4f8f; height: 1px; width: 50px;"></div>
 			[/et_pb_cta]
 		[/et_pb_column]
 	[/et_pb_row]
@@ -128,11 +128,11 @@ $adaptabilidad_codigo = get_field('adaptabilidad_codigo');
 	[/et_pb_row]
 [/et_pb_section]' : '') .
             (!empty($adaptabilidad) ?
-                    '[et_pb_section bb_built="1" admin_label="Sección Adaptabilidad" custom_padding="15px||15px|" transparent_background="off" allow_player_pause="off" inner_shadow="off" parallax="off" parallax_method="on" make_fullwidth="off" use_custom_width="off" width_unit="on" make_equal="off" use_custom_gutter="off"]
+                    '[et_pb_section bb_built="1" admin_label="Sección Adaptabilidad" custom_padding="15px||0px|" transparent_background="off" allow_player_pause="off" inner_shadow="off" parallax="off" parallax_method="on" make_fullwidth="off" use_custom_width="off" width_unit="on" make_equal="off" use_custom_gutter="off"]
 	[et_pb_row admin_label="Fila" custom_padding="0px||0px|" custom_margin="0px||0px|" parallax_method_1="off"]
 		[et_pb_column type="4_4"]
 			[et_pb_cta admin_label="Adaptabilidad" title="Adaptabilidad" use_background_color="off" background_layout="light" header_font="|on|||" header_font_size="40" header_text_color="#0e4f8f" body_font_size="20" custom_margin="0px||0px|" custom_padding="0px||0px|"]
-				<div class="separator small center " style="margin-top: 10px; margin-bottom: 24px; background-color: #0e4f8f; height: 1px; width: 50px;"></div>
+				<div class="separator small center " style="margin-top: 10px; background-color: #0e4f8f; height: 1px; width: 50px;"></div>
 			[/et_pb_cta]
 		[/et_pb_column]
 	[/et_pb_row]
@@ -156,7 +156,7 @@ $adaptabilidad_codigo = get_field('adaptabilidad_codigo');
 	[et_pb_row admin_label="Fila" custom_padding="40px|10px|10px|10px" custom_margin="40px|||" background_color="rgba(255,255,255,0.75)" parallax_method_1="off" parallax_method_2="off"]
 		[et_pb_column type="1_2"]
 			[et_pb_cta admin_label="Testimonios" title="Testimonios" use_background_color="off" background_layout="light" header_font="|on|||" header_font_size="40" header_text_color="#0e4f8f" body_font_size="20" custom_margin="0px||0px|" custom_padding="0px||0px|"]
-				<div class="separator small center " style="margin-top: 10px; margin-bottom: 24px; background-color: #0e4f8f; height: 1px; width: 50px;"></div>
+				<div class="separator small center " style="margin-top: 10px; background-color: #0e4f8f; height: 1px; width: 50px;"></div>
 			[/et_pb_cta]
 			[et_pb_code admin_label="Testimonios"]
 				[eah_testimonios]
