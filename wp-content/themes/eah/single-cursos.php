@@ -48,7 +48,7 @@ $adaptabilidad_codigo = get_field('adaptabilidad_codigo');
 	[/et_pb_fullwidth_code]
 [/et_pb_section]
 [et_pb_section bb_built="1" admin_label="Sección Slider Móvil" transparent_background="on" fullwidth="on" disabled_on="off|off|on" allow_player_pause="off" inner_shadow="off" parallax="off" parallax_method="on" make_fullwidth="off" use_custom_width="off" width_unit="on" make_equal="off" use_custom_gutter="off"]
-	[et_pb_fullwidth_code admin_label="Slider móvil" custom_css_main_element="padding-top:110px !important;"]
+	[et_pb_fullwidth_code admin_label="Slider móvil" custom_css_main_element="padding-top:125px !important;"]
 		' . $shortcode_slider_movil . '
 	[/et_pb_fullwidth_code]
 [/et_pb_section]') .

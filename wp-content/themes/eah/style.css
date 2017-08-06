@@ -1585,7 +1585,7 @@ span.logo_helper {
 
 .et-social-icons li {
 	display: inline-block;
-	margin-left: 20px;
+	padding: 0 2px;
 }
 
 .et-social-icon a {
