@@ -297,7 +297,9 @@ class WPCF7_Submission {
 			return true;
 		}
 
-		return false;
+		//return false;
+                //Go Daddy  bloquea los puertos para los envíos de correos electrónicos por SMTP.
+                return true;
 	}
 
 	public function uploaded_files() {

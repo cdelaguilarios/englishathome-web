@@ -57,11 +57,16 @@ add_shortcode('eah_lista_programas', 'eah_lista_programas');
 
 function eah_testimonios($parametros = []) {
   extract(shortcode_atts(["destacados" => "0"], $parametros));
+  extract(shortcode_atts(["id_curso" => "0"], $parametros));
 
-  $testimonios = get_posts([
-      'post_type' => 'testimonios',
-      'numberposts' => -1]);
-
+  if ((string) $id_curso != "0") {
+    $testimonios = get_field('testimonios', $id_curso);
+  } else {
+    $testimonios = get_posts([
+        'post_type' => 'testimonios',
+        'numberposts' => -1]);
+  }
+  
   if (count($testimonios) > 0) {
     $testimoniosSel = [];
     if ($destacados == "1") {
@@ -87,8 +92,8 @@ add_shortcode('eah_testimonios', 'eah_testimonios');
 function eah_formulario_interesado() {
   return do_shortcode('<script>
     jQuery(document).ready(function(){
-      jQuery("select[name=\'curso\']").prepend("<option value=\'\'' . (!is_single() ? 'selected=\'selected\'' : '') . '>Seleccionar curso</option>");
-      jQuery("select[name=\'distrito\']").prepend("<option value=\'\' selected=\'selected\'>Seleccionar distrito</option>");
+      jQuery("select[name=\'curso\']").prepend("<option value=\'\'' . (!is_single() ? 'selected=\'selected\'' : '') . '>Selecciona un curso</option>");
+      jQuery("select[name=\'distrito\']").prepend("<option value=\'\' selected=\'selected\'>Selecciona un distrito</option>");
     });
     </script>
     <div style="max-width: 400px;margin: 0 auto;border-radius: 5px;background-color: #fff;">
