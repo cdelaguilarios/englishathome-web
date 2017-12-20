@@ -23,7 +23,7 @@ class RevSliderWidget extends WP_Widget {
 						}
 					}
 				}
-				add_action('wp_footer', 'wp_func_jquery');
+				//add_action('wp_footer', 'wp_func_jquery');
 			}
 		}	
         // widget actual processes

@@ -1540,6 +1540,7 @@ span.logo_helper {
 /* Contact Info */
 #et-info {
 	float: left;
+        font-size: 15px;
 }
 
 #et-info-phone,
@@ -15828,4 +15829,42 @@ span.comment_date {
 	-webkit-transition: background-color 0.5s ease;
 	-moz-transition: background-color 0.5s ease;
 	transition: background-color 0.5s ease;
+}
+
+/*EAH*/
+.wpcf7-submit{
+  text-align: center !important;
+  line-height: 10px !important;
+}
+
+.contenedor-formulario-interesado .title-formulario{
+  text-align: center !important;
+}
+.contenedor-formulario-interesado .title-formulario span{
+  z-index: 5;
+  position: relative;
+}
+.contenedor-formulario-interesado{
+  max-width: 400px;
+  margin: 0 auto;
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+.rev_slider .contenedor-formulario-interesado{
+  width: 300px !important
+} 
+.rev_slider div.wpcf7-validation-errors{
+  border: 2px solid #f7e700 !important;
+  display: block !important;
+  border-width: 1px !important;
+}
+.rev_slider div.wpcf7-validation-errors, .rev_slider span.wpcf7-not-valid-tip{
+  word-wrap: break-word !important;
+  word-break: break-all !important;
+  white-space: pre-line !important;
+}
+.rev_slider .wpcf7 textarea{
+  padding: 5px !important;
+  line-height: inherit !important;
 }

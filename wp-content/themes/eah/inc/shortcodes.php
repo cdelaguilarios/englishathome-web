@@ -89,17 +89,35 @@ function eah_testimonios($parametros = []) {
 
 add_shortcode('eah_testimonios', 'eah_testimonios');
 
-function eah_formulario_interesado() {
+function eah_formulario_interesado($parametros = []) {
+  extract(shortcode_atts(["id_curso" => "0"], $parametros));
+  extract(shortcode_atts(["titulo" => "Solicita más información"], $parametros));
+  
   return do_shortcode('<script>
-    jQuery(document).ready(function(){
+    ' . ((string) $id_curso != "0" ? 'var esperarCargaElemento = function(selector, callback) {
+      if (jQuery(selector).length) {
+        callback();
+      } else {
+        setTimeout(function() {
+          esperarCargaElemento(selector, callback);
+        }, 100);
+      }
+    };' : '') . 
+    'jQuery(document).ready(function(){
       jQuery("select[name=\'curso\']").prepend("<option value=\'\'' . (!is_single() ? 'selected=\'selected\'' : '') . '>Selecciona un curso</option>");
-      jQuery("select[name=\'distrito\']").prepend("<option value=\'\' selected=\'selected\'>Selecciona un distrito</option>");
+      jQuery("select[name=\'distrito\']").prepend("<option value=\'\' selected=\'selected\'>Selecciona un distrito</option>");   
+      ' . ((string) $id_curso != "0" ? 
+      'esperarCargaElemento("select[name=\'curso\']", function() {
+          jQuery("select[name=\'curso\']").val(' . $id_curso . ');
+        });' : '') . '
     });
     </script>
-    <div style="max-width: 400px;margin: 0 auto;border-radius: 5px;background-color: #fff;">
-                      <h3 class="title-formulario"><span style="z-index: 5;position: relative;">Solicita más información</span></h3>
-                      [contact-form-7 id="395" title="Formulario interesados"]
-                      </div>');
+    <div class="contenedor-formulario-interesado">
+      <h3 class="title-formulario">
+        <span>' . $titulo . '</span>
+      </h3>
+      [contact-form-7 id="395" title="Formulario interesados"]
+    </div>');
 }
 
 add_shortcode('eah_formulario_interesado', 'eah_formulario_interesado');

@@ -8,7 +8,7 @@ function registro_interesado($contact_form) {
   try {
     if (395 == $idFormulario) {
       $url = 'http://englishathome/interesado/registrar/externo';
-      $variables = "cursoInteres=" . get_the_title($posted_data["curso"]) . "&nombre=" . $posted_data["nombres"] . "&apellido=" . $posted_data["apellidos"] . "&correoElectronico=" . $posted_data["correo-electronico"] . "&telefono=" . $posted_data["telefono"] . "&consulta=" . $posted_data["consulta"] . " - Distrito: " . $posted_data["distrito"];
+      $variables = "cursoInteres=" . get_the_title($posted_data["curso"]) . "&nombre=" . $posted_data["nombreCompleto"] . "&telefono=" . $posted_data["telefono"] . "&correoElectronico=" . $posted_data["correo-electronico"] . "&consulta=" . $posted_data["consulta"];
 
       $ch = curl_init($url);
       curl_setopt($ch, CURLOPT_POST, 1);
@@ -22,5 +22,10 @@ function registro_interesado($contact_form) {
     
   }
 }
-
 add_action('wpcf7_before_send_mail', 'registro_interesado');
+
+function no_enviar_correo_electronico() {
+  return true;
+}
+
+add_filter('wpcf7_skip_mail', 'no_enviar_correo_electronico');

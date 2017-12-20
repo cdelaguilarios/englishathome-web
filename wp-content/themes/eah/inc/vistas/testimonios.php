@@ -1,4 +1,4 @@
-<?php if (count($testimonios) > 0) { ?>
+<?php if (is_array($testimoniosSel) && count($testimoniosSel) > 0) { ?>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.theme.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.transitions.css">
@@ -104,4 +104,4 @@
           });
     });
   </script>
-<?php } ?>
+<?php }
