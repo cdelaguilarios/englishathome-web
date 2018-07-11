@@ -15836,8 +15836,13 @@ span.comment_date {
   text-align: center !important;
   line-height: 10px !important;
 }
+.sec-tarifario{
+  margin-bottom: 5px !important;
+}
 
 .contenedor-formulario-interesado .title-formulario{
+  padding-top: 0px !important;
+  padding-bottom: 20px !important;
   text-align: center !important;
 }
 .contenedor-formulario-interesado .title-formulario span{
@@ -15850,21 +15855,53 @@ span.comment_date {
   border-radius: 5px;
   background-color: #fff;
 }
+.contenedor-formulario-interesado .formulario-subtitulo{
+  font-size: 22px;
+}
+@media (max-width: 980px){
+  .contenedor-formulario-interesado .formulario-subtitulo{
+   font-size: 24px;
+  }
+}
 
+
+
+.rev_slider .title-formulario {
+  padding-top: 0px !important;
+  padding-bottom: 20px !important;
+}
+.rev_slider .title-formulario span {
+  font-size: 20px !important;
+}
 .rev_slider .contenedor-formulario-interesado{
-  width: 300px !important
+  width: 337px !important
 } 
+.rev_slider .contenedor-formulario-interesado .formulario-subtitulo{
+  font-size: 15px !important;
+}
+.rev_slider .contenedor-formulario-interesado .mensaje-material{
+  line-height: 15px !important;
+  color: #666 !important;
+}
 .rev_slider div.wpcf7-validation-errors{
   border: 2px solid #f7e700 !important;
   display: block !important;
   border-width: 1px !important;
+  line-height: 15px !important;
 }
 .rev_slider div.wpcf7-validation-errors, .rev_slider span.wpcf7-not-valid-tip{
   word-wrap: break-word !important;
   word-break: break-all !important;
   white-space: pre-line !important;
+  line-height: 15px !important;
 }
 .rev_slider .wpcf7 textarea{
-  padding: 5px !important;
-  line-height: inherit !important;
+  padding: 10px 5px !important;
+  line-height: 15px !important;
+} 
+
+.rev_slider .wpcf7-recaptcha iframe {
+  width: 97% !important;
+  height: auto !important;
+  max-height: 80px !important;
 }

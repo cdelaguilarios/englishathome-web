@@ -114,7 +114,8 @@ function eah_formulario_interesado($parametros = []) {
     </script>
     <div class="contenedor-formulario-interesado">
       <h3 class="title-formulario">
-        <span>' . $titulo . '</span>
+        <span>' . $titulo . '</span><br/>
+        <span class="formulario-subtitulo">Llena el formulario y obtén tu material ¡GRATIS!</span>
       </h3>
       [contact-form-7 id="395" title="Formulario interesados"]
     </div>');

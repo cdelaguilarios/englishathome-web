@@ -36,6 +36,15 @@ $adaptabilidad_codigo = get_field('adaptabilidad_codigo');
 		' . $shortcode_slider_movil . '
 	[/et_pb_fullwidth_code]
 [/et_pb_section]') .
+            '[et_pb_section bb_built="1" background_image="/wp-content/uploads/2017/07/eah_registro.jpg" disabled_on="off|off|on"]
+	[et_pb_row admin_label="Fila" custom_padding="5px|10px|10px|10px" custom_margin="5px|||" background_color="rgba(255,255,255,0.75)" parallax_method_1="off" parallax_method_2="off"]
+		[et_pb_column type="1_2"]
+			[et_pb_code admin_label="Formulario interesados" module_id="formulario-interesado" custom_css_main_element="margin-top:20px"]
+				[eah_formulario_interesado titulo="" id_curso="' . get_the_ID() . '"]
+			[/et_pb_code]
+		[/et_pb_column]
+	[/et_pb_row]
+[/et_pb_section]' .
             (!empty($estructura) ?
                     '[et_pb_section bb_built="1" admin_label="Sección Estructura" custom_padding="15px||0px|" transparent_background="off" allow_player_pause="off" inner_shadow="off" parallax="off" parallax_method="on" make_fullwidth="off" use_custom_width="off" width_unit="on" make_equal="off" use_custom_gutter="off"]
 	[et_pb_row admin_label="Fila" custom_padding="0px||0px|" custom_margin="0px||0px|" parallax_method_1="off" custom_css_main_1="margin-bottom: 0px;" custom_css_main_element="padding: 0px;"]
@@ -128,11 +137,10 @@ $adaptabilidad_codigo = get_field('adaptabilidad_codigo');
 		[/et_pb_column]
 		[et_pb_column type="1_2"]
                         ' . ($adaptabilidad_imagen ?
-                            '[et_pb_image admin_label="Adaptabilidad imagen" src="' . $adaptabilidad_imagen["url"] . '" animation="right" align="center" /]' : '') . '
-                        ' . (!is_null($adaptabilidad_codigo) ?
+                            '[et_pb_image admin_label="Adaptabilidad imagen" src="' . $adaptabilidad_imagen["url"] . '" animation="right" align="center" /]' : (!is_null($adaptabilidad_codigo) ?
                             '[et_pb_code admin_label="Adaptabilidad código"]
 			' . $adaptabilidad_codigo . '
-			[/et_pb_code]' : '') . '
+			[/et_pb_code]' : '')) . '
 		[/et_pb_column]
 	[/et_pb_row]
 [/et_pb_section]' : '') .
@@ -146,9 +154,9 @@ $adaptabilidad_codigo = get_field('adaptabilidad_codigo');
 				[eah_testimonios id_curso="' . get_the_ID() . '"]
 			[/et_pb_code]
 		[/et_pb_column]
-		[et_pb_column type="1_2"]
+		[et_pb_column type="1_2" disabled_on="on|on|off"]
 			[et_pb_code admin_label="Formulario interesados" module_id="formulario-interesado" custom_css_main_element="margin-top:20px"]
-				[eah_formulario_interesado id_curso="' . get_the_ID() . '"]
+				[eah_formulario_interesado titulo="" id_curso="' . get_the_ID() . '"]
 			[/et_pb_code]
 		[/et_pb_column]
 	[/et_pb_row]
