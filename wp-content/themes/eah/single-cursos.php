@@ -39,7 +39,7 @@ $adaptabilidad_codigo = get_field('adaptabilidad_codigo');
             '[et_pb_section bb_built="1" background_image="/wp-content/uploads/2017/07/eah_registro.jpg" disabled_on="off|off|on"]
 	[et_pb_row admin_label="Fila" custom_padding="5px|10px|10px|10px" custom_margin="5px|||" background_color="rgba(255,255,255,0.75)" parallax_method_1="off" parallax_method_2="off"]
 		[et_pb_column type="1_2"]
-			[et_pb_code admin_label="Formulario interesados" module_id="formulario-interesado" custom_css_main_element="margin-top:20px"]
+			[et_pb_code admin_label="Formulario interesados" module_id="formulario-interesado-movil" custom_css_main_element="margin-top:20px"]
 				[eah_formulario_interesado titulo="" id_curso="' . get_the_ID() . '"]
 			[/et_pb_code]
 		[/et_pb_column]
